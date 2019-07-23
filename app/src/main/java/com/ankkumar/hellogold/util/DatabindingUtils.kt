@@ -1,19 +1,20 @@
 package com.ankkumar.hellogold.util
 
 
-import android.databinding.BindingAdapter
-import android.support.v4.widget.SwipeRefreshLayout
-import android.support.v7.widget.DividerItemDecoration
-import android.support.v7.widget.LinearLayoutManager
-import android.support.v7.widget.RecyclerView
-import android.support.v7.widget.Toolbar
+import androidx.appcompat.widget.Toolbar
+import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.DividerItemDecoration
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.ankkumar.hellogold.ui.MainSpotPriceAdapter
 
 
 object DatabindingUtils {
 
     @BindingAdapter("colorScheme")
-    fun setColorSchemes(layout: SwipeRefreshLayout, isSet: Boolean) {
+    fun setColorSchemes(
+        layout: androidx.swiperefreshlayout.widget.SwipeRefreshLayout,
+        isSet: Boolean
+    ) {
         if (isSet) {
             layout.setColorSchemeResources(
                 android.R.color.holo_blue_bright,
@@ -25,15 +26,24 @@ object DatabindingUtils {
     }
 
     @BindingAdapter("initLayout")
-    fun setInitLayout(recyclerView: RecyclerView, isCustom: Boolean) {
+    fun setInitLayout(recyclerView: androidx.recyclerview.widget.RecyclerView, isCustom: Boolean) {
         if (isCustom) {
-            recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
-            recyclerView.addItemDecoration(DividerItemDecoration(recyclerView.context, DividerItemDecoration.VERTICAL))
+            recyclerView.layoutManager =
+                LinearLayoutManager(recyclerView.context)
+            recyclerView.addItemDecoration(
+                DividerItemDecoration(
+                    recyclerView.context,
+                    DividerItemDecoration.VERTICAL
+                )
+            )
         }
     }
 
     @BindingAdapter("adapter")
-    fun setAdapter(recyclerView: RecyclerView, adapter: MainSpotPriceAdapter) {
+    fun setAdapter(
+        recyclerView: androidx.recyclerview.widget.RecyclerView,
+        adapter: MainSpotPriceAdapter
+    ) {
         recyclerView.adapter = adapter
     }
 

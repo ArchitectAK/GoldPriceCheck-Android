@@ -1,7 +1,7 @@
 package com.ankkumar.hellogold.ui
 
 import android.content.Context
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,7 +11,7 @@ import com.ankkumar.hellogold.app.GoldApp
 import com.ankkumar.hellogold.model.response.Data
 
 
-class MainSpotPriceAdapter : RecyclerView.Adapter<MainSpotPriceAdapter.MainSpotPriceViewHolder>() {
+class MainSpotPriceAdapter : androidx.recyclerview.widget.RecyclerView.Adapter<MainSpotPriceAdapter.MainSpotPriceViewHolder>() {
 
 
     lateinit var goldDataList: MutableList<Data>
@@ -31,7 +31,7 @@ class MainSpotPriceAdapter : RecyclerView.Adapter<MainSpotPriceAdapter.MainSpotP
     }
 
 
-    class MainSpotPriceViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    class MainSpotPriceViewHolder(itemView: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(itemView) {
 
         var buyText: TextView
         var sellText: TextView

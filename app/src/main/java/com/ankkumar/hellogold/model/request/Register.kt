@@ -1,7 +1,7 @@
 package com.ankkumar.hellogold.model.request
 
-import android.databinding.BaseObservable
-import android.databinding.Bindable
+import androidx.databinding.BaseObservable
+import androidx.databinding.Bindable
 import java.util.*
 
 class Register : BaseObservable {

@@ -7,7 +7,7 @@
                 type="com.ankkumar.hellogold.ui.RegisterViewModel"/>
     </data>
 
-    <android.support.constraint.ConstraintLayout
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:paddingLeft="16dp"
@@ -16,7 +16,7 @@
             android:paddingEnd="16dp"
             android:background="@color/colorPrimary">
 
-        <android.support.constraint.ConstraintLayout
+        <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/main_login_screen_layout"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
@@ -65,6 +65,6 @@
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
                     android:onClick="@{regViewModel::register}"/>
-        </android.support.constraint.ConstraintLayout>
-    </android.support.constraint.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

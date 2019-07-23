@@ -1,9 +1,9 @@
 package com.ankkumar.hellogold.ui
 
-import android.databinding.ObservableBoolean
-import android.databinding.ObservableField
+import androidx.databinding.ObservableBoolean
+import androidx.databinding.ObservableField
 import com.ankkumar.hellogold.remote.RetrofitInitializer
-import android.support.v4.widget.SwipeRefreshLayout
+import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import android.view.View
 import com.ankkumar.hellogold.app.GoldApp
 import com.ankkumar.hellogold.db.AppDatabase
@@ -20,7 +20,7 @@ class MainViewModel {
 
     var adapter: MainSpotPriceAdapter = MainSpotPriceAdapter()
 
-    var onRefreshListener: SwipeRefreshLayout.OnRefreshListener = SwipeRefreshLayout.OnRefreshListener { onFetchData() }
+    var onRefreshListener: androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener = androidx.swiperefreshlayout.widget.SwipeRefreshLayout.OnRefreshListener { onFetchData() }
 
 
     // handling fab click event
